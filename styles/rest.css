@@ -1,0 +1,99 @@
+/* Box sizing rules */
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body, h2, p {
+  margin: 0;
+}
+
+/* Body Default Settings */
+body {
+  padding: 4rem;
+
+  place-content: center;
+  min-height: 100vh;
+
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 400;
+
+  background-color: hsl(210, 46%, 95%);
+}
+
+.testimonial {
+  /* border: 0.15rem solid lightcoral; */
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(217 19% 35% / 0.25);
+}
+
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: 1em;
+}
+.quote {
+  background-image: url("../images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right 10%;
+}
+
+.testimonial img {
+  width: 1.75rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.testimonial .name {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.testimonial .position {
+  font-size: 0.6875rem;
+  opacity: 0.5;
+}
+
+.testimonial > p:first-of-type {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.testimonial > p:last-of-type {
+  opacity: 0.7;
+}
+
+/* <------- Utilities Class Selector -------> */
+/* Background Color */
+.bg-moderate-violet {
+  background-color: hsl(263, 55%, 52%);
+}
+.bg-dark-grayish-blue {
+  background-color: hsl(217, 19%, 35%);
+}
+.bg-dark-blackish-blue {
+  background-color: hsl(219, 29%, 14%);
+}
+.bg-neutral-white {
+  background-color: hsl(0 0% 100%);
+}
+
+/* Text Color */
+.text-neutral-white {
+  color: hsl(0 0% 100%);
+}
+.text-dark-grayish-blue {
+  color: hsl(217, 19%, 35%);
+}
+
+/* Border Color */
+.border-light-purple {
+  border: 2px solid #a775f1;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); text-decoration: wavy; }
