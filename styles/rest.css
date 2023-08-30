@@ -9,7 +9,7 @@ body, h2, p {
 
 /* Body Default Settings */
 body {
-  padding: 4rem;
+  padding: min(5%, 4em);
 
   place-content: center;
   min-height: 100vh;
