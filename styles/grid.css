@@ -1,15 +1,58 @@
 .container-grid {
   display: grid;
   gap: 1.5rem;
+
+  grid-auto-columns: 1fr;
+  grid-template-areas: 
+    'one'
+    'two'
+    'three'
+    'four'
+    'five';
   
   padding-block: 2rem;
   width: min(95%, 70rem);
   margin-inline: auto;
+  margin: 0 auto;
 }
 
+/* Setting Grid area names for every section */
+.testimonial:nth-child(1) {
+  grid-area: one;
+}
+.testimonial:nth-child(2) {
+  grid-area: two;
+}
+.testimonial:nth-child(3) {
+  grid-area: three;
+}
+.testimonial:nth-child(4) {
+  grid-area: four;
+}
+.testimonial:nth-child(5) {
+  grid-area: five;
+}
 
-@media(min-width:768px) {
+/* Media Queries */
+@media(min-width: 27rem) {
   .container-grid {
+    grid-template-areas: 
+      'one one'
+      'two three'
+      'four four'
+      'five five';
+  }
+}
+
+@media(min-width: 49rem) {
+  .container-grid {
+    grid-template-areas: 
+      'one one two five'
+      'three four four five';
+  }
+
+  /* Using primitive methods */
+  /* .container-grid {
     grid-template-columns: repeat(4, 1fr);
   }
 
@@ -20,5 +63,5 @@
   .testimonial:last-child {
     grid-column: 4;
     grid-row: 1 / 3;
-  }
+  } */
 }
